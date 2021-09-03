@@ -53,7 +53,7 @@ module.exports = async (client, message) => {
         //If client permissions arraylist length is more than one return error
         if (clientPerms.length > 0) return message.reply("Looks like I'm missing the following permissions:\n" + clientPerms.map((p) => `\`${p}\``).join(", "));
 
-        if (client.cooldown.isOnCooldown(message.guildId, message.author.id)) return message.channel.send(`:x: You have to wait ${client.tools.msToTime(client.cooldown.getCooldown(message.guildId, message.author.id, cmd.name))} to use this command again.`);
+        if (client.cooldown.isOnCooldown(message.guildId, message.author.id)) return message.reply(`:x: You have to wait ${client.tools.msToTime(client.cooldown.getCooldown(message.guildId, message.author.id, cmd.name))} to use this command again.`);
         client.cooldown.setCooldown(message.guildId, message.author.id, cmd.help.name, cmd.help.cooldown);
 
         //Get the user database
