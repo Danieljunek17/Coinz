@@ -1,14 +1,12 @@
 const { MessageEmbed } = require("discord.js");
-const { getMember } = require('../../tools/resolvers');
-const { progressBar, calcLvl } = require('../../tools/tools');
 
 module.exports.execute = async (client, message, args, data) => {
-    let member = args.join(" ") ? await getMember(args.join(" "), message.guild) : message.member;
+    let member = args.join(" ") ? await client.resolver.getMember(args.join(" "), message.guild) : message.member;
     if (!member) member = message.member;
 
     let userData = await client.database.fetchUser(member.id, message.guildId);
 
-    const userLevel = calcLvl(userData.experience);
+    const userLevel = client.tools.calcLvl(userData.experience);
 
     const newEmbed = new MessageEmbed()
         .setAuthor(`User info of ${member.user.username}`, `${member.user.avatarURL()}`)
@@ -17,7 +15,7 @@ module.exports.execute = async (client, message, args, data) => {
         .setFooter(client.config.footer)
         .setTimestamp()
         .addFields(
-            { name: 'Level Stats', value: `**Level:** ${userLevel}\n**Experience:** \`${userData.experience}/${userLevel * 100 + 100}\`\n\`${progressBar(userData.experience % 100, 100, 7)}\``, inline: false },
+            { name: 'Level Stats', value: `**Level:** ${userLevel}\n**Experience:** \`${userData.experience}/${userLevel * 100 + 100}\`\n\`${client.tools.progressBar(userData.experience % 100, 100, 7)}\``, inline: false },
             { name: 'Money', value: `** Cash:** ${data.guild.currency} ${userData.economy.cash}\n ** Bank:** ${data.guild.currency} ${userData.economy.bank}\n ** Net:** ${data.guild.currency} ${userData.economy.net}`, inline: true },
             { name: 'Social', value: `** Followers:** ${userData.social.followers}\n ** Likes:** ${userData.social.likes}\n ** Unread Comments:** ${userData.social['comments'].length}`, inline: true }
         );
