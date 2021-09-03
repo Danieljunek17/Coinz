@@ -1,8 +1,14 @@
 const { MessageEmbed } = require("discord.js");
 
 module.exports.execute = async (client, message, args, data) => {
-    let member = args.join(" ") ? await client.resolver.getMember(args.join(" "), message.guild) : message.member;
-    if (!member) member = message.member;
+    let member;
+    try {
+        member = args.join(" ") ? await client.resolver.getMember(args.join(" "), message.guild) : message.member;
+    } catch (err) {
+        return message.reply({ content: `:x: This user doesn't exist.` })
+    } finally {
+        if (!member) member = message.member;
+    }
 
     let userData = await client.database.fetchUser(member.id, message.guildId);
 
