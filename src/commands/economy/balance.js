@@ -1,13 +1,13 @@
 const { MessageEmbed } = require("discord.js");
 
 module.exports.execute = async (client, message, args, data) => {
-    let member = args.join(" ") ? await getMember(args.join(" "), message.guild) : message.member;
+    let member = args.join(" ") ? await client.resolver.getMember(args.join(" "), message.guild) : message.member;
     if (!member) member = message.member;
 
     let userData = await client.database.fetchUser(member.id, message.guildId);
 
     const newEmbed = new MessageEmbed()
-        .setAuthor(`${message.member.user.username}'s Balance.`, `${message.member.user.avatarURL()}`)
+        .setAuthor(`${member.user.username}'s Balance.`, `${member.user.avatarURL()}`)
         .setColor("BLUE")
         .setFooter(client.config.footer)
         .setTimestamp()
