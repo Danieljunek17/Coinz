@@ -1,4 +1,11 @@
-# See http://help.github.com/ignore-files/ for more about ignoring files.
+# project related
+website/config.py
+website/coinzbotvenv/
+website/static/img/
+
+# Byte-compiled / optimized / DLL files
+website/__pycache__/
+__pycache__/
 
 # compiled output
 /dist
@@ -37,13 +44,7 @@ bower_components
 *.launch
 .settings/
 *.sublime-workspace
-
-# IDE - VSCode
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
+.vscode/
 
 # misc
 .sass-cache
