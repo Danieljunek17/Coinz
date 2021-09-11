@@ -1,6 +1,3 @@
-/*
-
-*/
 const { MessageActionRow, MessageButton, MessageEmbed, MessageSelectMenu, ButtonInteraction } = require('discord.js');
 const shopInv = require('../../data/shopInventory.json');
 var shop = {};  // used to cache every item in the shop
@@ -20,7 +17,7 @@ function getShopItems() {
 
 function createShopEmbed(client, prefix, shopStr, currentPage, maxPages) {
     let embed = new MessageEmbed()
-        .setAuthor(`Coinz Shop`) //, `${client.user.avatarURL()}`)
+        .setAuthor(`Coinz Shop`)
         .setColor("BLUE")
         .setFooter(`${prefix}shop [item] to get more info about an item. ─ Page ${currentPage + 1} of ${maxPages}.`)
         .setDescription(shopStr)
@@ -139,7 +136,7 @@ module.exports.execute = async (client, message, args, data) => {
 module.exports.help = {
     name: "shop",
     aliases: ["store"],
-    description: "View items in the shop. To buy an item, use the `buy` command. Check also the item of the day in the shop.",
+    description: "View items in the shop. To buy an item, use the `buy` command.",
     usage: ["shop [item]"],
     examples: ["shop Coinz Trophy", "shop"],
     extraFields: [],
