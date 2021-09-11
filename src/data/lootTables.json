@@ -1,0 +1,127 @@
+{
+    "beg": {
+        "fail": {
+            "chance": 30,
+            "coins": [],
+            "items": []
+        },
+        "common": {
+            "chance": 35,
+            "coins": [
+                1,
+                50
+            ],
+            "items": []
+        },
+        "uncommon": {
+            "chance": 25,
+            "coins": [
+                50,
+                150
+            ],
+            "items": []
+        },
+        "rare": {
+            "chance": 9,
+            "coins": [
+                150,
+                350
+            ],
+            "items": []
+        },
+        "super rare": {
+            "chance": 1,
+            "coins": [
+                350,
+                800
+            ],
+            "items": []
+        }
+    },
+    "crime": {
+        "fail": {
+            "chance": 50,
+            "coins": [
+                -100,
+                -2500
+            ]
+        },
+        "neutral": {
+            "chance": 20,
+            "coins": []
+        },
+        "common": {
+            "chance": 15,
+            "coins": [
+                350,
+                800
+            ]
+        },
+        "uncommon": {
+            "chance": 5,
+            "coins": [
+                50,
+                150
+            ]
+        },
+        "rare": {
+            "chance": 4,
+            "coins": [
+                150,
+                350
+            ]
+        },
+        "super rare": {
+            "chance": 1,
+            "coins": [
+                350,
+                800
+            ]
+        }
+    },
+    "fish": {
+        "fail": {
+            "chance": 50,
+            "coins": [],
+            "items": []
+        },
+        "common": {
+            "chance": 30,
+            "items": []
+        },
+        "uncommon": {
+            "chance": 16,
+            "items": []
+        },
+        "rare": {
+            "chance": 3,
+            "items": []
+        },
+        "super rare": {
+            "chance": 1,
+            "items": []
+        }
+    },
+    "dig": {
+        "fail": {
+            "chance": 70,
+            "items": []
+        },
+        "common": {
+            "chance": 15,
+            "items": []
+        },
+        "uncommon": {
+            "chance": 5,
+            "items": []
+        },
+        "rare": {
+            "chance": 4,
+            "items": []
+        },
+        "super rare": {
+            "chance": 1,
+            "items": []
+        }
+    }
+}
