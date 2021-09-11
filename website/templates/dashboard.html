@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="centered">
+    <h1>Dashboard</h1>
+
+    <div class="row-12">
+        <div class="container col rowbox userbox">
+            <img src="https://cdn.discordapp.com/avatars/{{ user['id'] }}/{{ user['avatar_hash'] }}.png?size=128"
+                alt="User Avatar" height="100px" width="100px" data-aos="fade-right">
+            <h2 class="me-auto" data-aos="fade-right">{{ user['username'] }}#{{ user['discriminator'] }}</h2>
+            <a href="{{ url_for('.logout') }}" data-aos="fade-left">
+                <p class="cta-btn">LOGOUT</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="row-12">
+        {% for guild in guilds %}
+        <div class="container col rowbox serverbox">
+            <img src="{{ guilds[guild]['guild_icon'] }}" alt="Server Icon" height="80px" width="80px"
+                data-aos="fade-right">
+            <h2 class="me-auto" data-aos="fade-right">{{ guilds[guild]['guild_name'] }}</h2>
+
+            {% if guilds[guild]['client_is_invited'] %}
+            <a href="{{ url_for('guild', guild_id=guilds[guild]['guild_id'] ) }}" data-aos="fade-left">
+                <p class="cta-btn">DASHBOARD</p>
+            </a>
+            {% else %}
+            <a href="{{ url_for('invite_guild', guild_id=guilds[guild]['guild_id']) }}" data-aos="fade-left">
+                <p class="cta-btn">ADD TO SERVER</p>
+            </a>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+</div>
+{% endblock %}
