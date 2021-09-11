@@ -37,3 +37,7 @@ module.exports.progressBar = (value, maxValue, size) => {
 module.exports.calcLvl = exp => {
     return parseInt(exp / 100);
 };
+
+module.exports.getRandomNumber = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1) + min)
+};
