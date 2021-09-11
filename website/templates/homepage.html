@@ -1,0 +1,272 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<section id="hero" class="hero">
+    <div style="margin-top: 100px;"></div>
+    <div class="row">
+        <div class="col vertical-centered">
+            <div class="title" data-aos="fade-down" data-aos-delay="100">
+                <h1>Coinz</h1>
+            </div>
+            <div class="description" data-aos="fade-right" data-aos-delay="100">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, obcaecati cupiditate. Provident
+                    veritatis similique voluptatibus ex! Itaque incidunt, vero autem, facilis atque placeat totam
+                    tempore
+                    numquam harum quidem illo error!</p>
+            </div>
+            <div class="hero-btns" data-aos="fade-up" data-aos-delay="100">
+                <a href="{{ url_for('invite') }}">
+                    <h4 class="hero-btn">ADD TO SERVER</h4>
+                </a>
+                <a href="#features">
+                    <h4 class="hero-btn">SEE FEATURES</h4>
+                </a>
+            </div>
+        </div>
+        <div class="col ms-auto vertical-centered" data-aos="fade-left" data-aos-delay="100">
+            <img src="{{ url_for('static', filename='img/SupermanCoinz.png') }}" alt="Hero Image" height="750px">
+        </div>
+    </div>
+</section>
+
+<div class="wave wave-hero">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+            fill="#363C6C"></path>
+    </svg>
+</div>
+
+<section id="features" class="features">
+    <div class="container">
+        <h1 class="title">FEATURES</h1>
+        <div class="seperator"></div>
+
+        <div class="row d-flex justify-content-between">
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="features-box">
+                    <img src="{{ url_for('static', filename='img/features/cpu.png') }}" alt="" width="125px">
+                    <h1>50+ Commands</h1>
+                    <p>Coinz contains more than 50 command for everyone to use. You will never get bored again!</p>
+                </div>
+            </div>
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="150">
+                <div class="features-box">
+                    <img src="{{ url_for('static', filename='img/features/computer.png') }}" alt="" width="125px">
+                    <h1>Dashboard</h1>
+                    <p>Coinz contains more than 50 command for everyone to use. You will never get bored again!</p>
+                </div>
+            </div>
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="features-box">
+                    <img src="{{ url_for('static', filename='img/features/wallet.png') }}" alt="" width="125px">
+                    <h1>Free To Use</h1>
+                    <p>Coinz contains more than 50 command for everyone to use. You will never get bored again!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="space-features"></div>
+
+        <div class="row d-flex justify-content-space-between">
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="features-box vertical-centered">
+                    <img src="{{ url_for('static', filename='img/features/confetti.png') }}" alt="" width="125px">
+                    <h1>Unique Features</h1>
+                    <p>Coinz contains more than 50 command for everyone to use. You will never get bored again!</p>
+                </div>
+            </div>
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="150">
+                <div class="features-box">
+                    <img src="{{ url_for('static', filename='img/features/money.png') }}" alt="" width="125px">
+                    <h1>Economy</h1>
+                    <p>Coinz contains more than 50 command for everyone to use. You will never get bored again!</p>
+                </div>
+            </div>
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="features-box">
+                    <img src="{{ url_for('static', filename='img/features/spaceship.png') }}" alt="" width="125px">
+                    <h1>Minigames</h1>
+                    <p>Coinz contains more than 50 command for everyone to use. You will never get bored again!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="wave wave-features">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+            fill="#363C6C"></path>
+    </svg>
+</div>
+
+<section id="testimonials" class="testimonials">
+    <div class="container">
+        <h1 class="title">TESTIMONIALS</h1>
+        <div class="seperator"></div>
+
+        <div class="row">
+            <div class="col-lg-4 testimonial-normal" data-aos="fade-right" data-aos-delay="150">
+                <div class="testimonial-box">
+                    <img src="https://cdn.discordapp.com/avatars/643072638075273248/a_48a2d43ef81558c8c375a75ca1695fc9.gif"
+                        alt="" width="125px">
+                    <p>"Coinz is the best thing that has ever happened to me. I have been using it for a while now and
+                        it has really helped me out. I have been able to get my work done and I have never been able to
+                        get anything done before."</p>
+                    <h4>Siebe#9999</h4>
+                </div>
+            </div>
+            <div class="col-lg-4 testimonial-long" data-aos="fade-up" data-aos-delay="200">
+                <div class="testimonial-box">
+                    <img src="https://cdn.discordapp.com/avatars/643072638075273248/a_48a2d43ef81558c8c375a75ca1695fc9.gif"
+                        alt="" width="125px">
+                    <p>"Coinz is the best thing that has ever happened to me. I have been using it for a while now and
+                        it has really helped me out. I have been able to get my work done and I have never been able to
+                        get anything done before. I am really happy with the product."</p>
+                    <h4>Siebe#9999</h4>
+                </div>
+            </div>
+            <div class="col-lg-4 testimonial-normal" data-aos="fade-left" data-aos-delay="150">
+                <div class="testimonial-box">
+                    <img src="https://cdn.discordapp.com/avatars/643072638075273248/a_48a2d43ef81558c8c375a75ca1695fc9.gif"
+                        alt="" width="125px">
+                    <p>"Coinz is the best thing that has ever happened to me. I have been using it for a while now and
+                        it has really helped me out. I have been able to get my work done and I have never been able to
+                        get anything done before."</p>
+                    <h4>Siebe#9999</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="faq" class="faq">
+    <div class="container">
+        <h1 class="title">FAQ</h1>
+        <div class="seperator"></div>
+
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item" data-aos="fade-up" data-aos-delay="100">
+                <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        Accordion Item #1
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate
+                        the class. This is the first item's accordion body.</div>
+                </div>
+            </div>
+            <div class="accordion-item" data-aos="fade-up" data-aos-delay="150">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        Accordion Item #2
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate
+                        the class. This is the second item's accordion body. Let's imagine
+                        this being filled with some actual content.</div>
+                </div>
+            </div>
+            <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
+                <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Accordion Item #3
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate
+                        the class. This is the third item's accordion body. Nothing more
+                        exciting happening here in terms of content, but just filling up the space to make it look, at
+                        least at first glance, a bit more representative of how this would look in a real-world
+                        application.</div>
+                </div>
+            </div>
+            <div class="accordion-item" data-aos="fade-up" data-aos-delay="250">
+                <h2 class="accordion-header" id="flush-headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                        Accordion Item #4
+                    </button>
+                </h2>
+                <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate
+                        the class. This is the third item's accordion body. Nothing more
+                        exciting happening here in terms of content, but just filling up the space to make it look, at
+                        least at first glance, a bit more representative of how this would look in a real-world
+                        application.</div>
+                </div>
+            </div>
+            <div class="accordion-item" data-aos="fade-up" data-aos-delay="300">
+                <h2 class="accordion-header" id="flush-headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                        Accordion Item #5
+                    </button>
+                </h2>
+                <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate
+                        the class. This is the third item's accordion body. Nothing more
+                        exciting happening here in terms of content, but just filling up the space to make it look, at
+                        least at first glance, a bit more representative of how this would look in a real-world
+                        application.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <div class="container">
+        <h1 class="title">CONTACT</h1>
+        <div class="seperator"></div>
+
+        <div class="row d-flex justify-content-between">
+            <div class="col-lg-4" data-aos="fade-right" data-aos-delay="150">
+                <iframe src="https://canary.discord.com/widget?id=530770169644187651&theme=dark" width="350"
+                    height="500" allowtransparency="true" frameborder="0"
+                    sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+            </div>
+            <div class="col-lg-8 my-auto" data-aos="fade-left" data-aos-delay="150">
+                <form class="contact-form">
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-lg-6">
+                            <div class="mb-4">
+                                <input type="text" class="form-control" placeholder="Name" id="inputName">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="mb-4">
+                                <input type="text" class="form-control" placeholder="Discord Name + Tag"
+                                    id="inputDiscordName">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <input type="email" class="form-control" id="inputEmail" placeholder="Email"
+                            aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-4">
+                        <textarea class="form-control" id="inputMessage" type="text" placeholder="Message"
+                            style="height: 15rem;"></textarea>
+                    </div>
+                    <button type="submit" class="btn disabled">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
