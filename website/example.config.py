@@ -2,7 +2,7 @@ SECRET_KEY = b"SECRET_KEY"
 
 DISCORD_CLIENT_ID = 0
 DISCORD_CLIENT_SECRET = "YOUR_CLIENT_SECRET_HERE"
-DISCORD_REDIRECT_URI = "http://www.your-website-here.com/callback/"
+DISCORD_REDIRECT_URI = "http://www.your-website-here.com/callback"
 DISCORD_BOT_TOKEN = "YOUR_DISCORD_BOT_TOKEN_HERE"
 
 MONGODB_URI = "mongodb://"
