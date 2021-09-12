@@ -1,4 +1,4 @@
-const { MessageActionRow, MessageButton, MessageEmbed, MessageSelectMenu, ButtonInteraction } = require('discord.js');
+const { MessageActionRow, MessageButton, MessageEmbed, ButtonInteraction } = require('discord.js');
 const shopInv = require('../../data/shopInventory.json');
 var shop = {};  // used to cache every item in the shop
 var shopSize = 0;
