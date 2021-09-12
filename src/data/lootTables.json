@@ -2,40 +2,35 @@
     "beg": {
         "fail": {
             "chance": 30,
-            "coins": [],
-            "items": []
+            "coins": []
         },
         "common": {
             "chance": 35,
             "coins": [
                 1,
                 50
-            ],
-            "items": []
+            ]
         },
         "uncommon": {
             "chance": 25,
             "coins": [
                 50,
                 150
-            ],
-            "items": []
+            ]
         },
         "rare": {
             "chance": 9,
             "coins": [
                 150,
                 350
-            ],
-            "items": []
+            ]
         },
         "super rare": {
             "chance": 1,
             "coins": [
                 350,
                 800
-            ],
-            "items": []
+            ]
         }
     },
     "crime": {
@@ -44,45 +39,50 @@
             "coins": [
                 -100,
                 -2500
-            ]
+            ],
+            "items": []
         },
         "neutral": {
             "chance": 20,
-            "coins": []
+            "coins": [],
+            "items": []
         },
         "common": {
             "chance": 15,
             "coins": [
                 350,
                 800
-            ]
+            ],
+            "items": []
         },
         "uncommon": {
             "chance": 5,
             "coins": [
                 50,
                 150
-            ]
+            ],
+            "items": []
         },
         "rare": {
             "chance": 4,
             "coins": [
                 150,
                 350
-            ]
+            ],
+            "items": []
         },
         "super rare": {
             "chance": 1,
             "coins": [
                 350,
                 800
-            ]
+            ],
+            "items": []
         }
     },
     "fish": {
         "fail": {
             "chance": 50,
-            "coins": [],
             "items": []
         },
         "common": {
