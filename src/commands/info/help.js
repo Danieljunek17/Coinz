@@ -8,17 +8,17 @@ function createCommandEmbed(client, data, command) {
         .setDescription(command.description || "No Description.")
         .addField('Command Usage', `\`${data.guild.prefix}${command.usage}\``, false)
 
-    if (!command.aliases) {
+    if ((command.aliases).length) {
         let aliases = [];
 
         for (const alias in command.aliases) {
             aliases.push(`\`${alias}\``)
         };
 
-        embed.addField("Aliases", aliases.join(", "), false)
+        if (aliases.length) embed.addField("Aliases", aliases.join(", "), false)
     };
 
-    if (!command.extraFields) {
+    if ((command.extraFields).length) {
         for (const field in command.extraFields) {
             let value = field['value']
             value = value.replace("%currency%", `${data.guild.currency}`)
