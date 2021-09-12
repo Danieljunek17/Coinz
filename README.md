@@ -8,12 +8,15 @@ Want to contribute? Great, we love that! Please take your time on [opening a new
 
 
 ## Self-hosting
-We do not recommend self-hosting the bot, but it's always an option. To selfhost the bot yourself, you need to have:
+We do not recommend self-hosting the bot and website, but it's always an option.
+
+### Self-host Discord Bot
+To selfhost the bot yourself, you need to have:
 * Node - confirmed working on v16.8.0
 * npm - comes with Node, the version shouldn't really matter
 * A Discord bot token, and having the bot in your server
 * An mongodb.com-database set up, as well as a user to it (with write access)
-* A clone of the source code, this can be found [here](https://github.com/SiebeBaree/AquaSolutions) and needs to be extracted to a folder.
+* A clone of the source code, this can be found [here](https://github.com/SiebeBaree/Coinz) and needs to be extracted to a folder.
 
 We will have to do this once:
 * Do `npm i` inside the folder, and wait for it to finish.
@@ -28,8 +31,28 @@ DATABASE_URI=mongodb://127.0.0.1:27017/coinz
 
 After all this, start the bot with `npm run start`.
 
+### Self-host Website
+To selfhost the website yourself, you need to have:
+* Python - confirmed working on v3.9.6
+* pip - comes with Python, the version shouldn't really matter (at least 2.x)
+* OAuth2 Redirects setup (You can find the OAuth2 tab in your discord application)
+* All packages installed (List of all packages in `/website/requirements.txt`)
+* A clone of the source code, this can be found [here](https://github.com/SiebeBaree/Coinz) and needs to be extracted to a folder.
+
+We will have to do this once:
+* Rename `example.config.py` to `config.py`.
+* Change `config.py` with your default values.
+
+**OAuth2 Redirects:** *(For local testing change `https://www.your-website-here.com` to `http://127.0.0.1:5000`)*
+```
+https://www.your-website-here.com/callback
+https://www.your-website-here.com/dashboard
+```
+
+After all this, run `website/coinzbot.py`.
+
 > ### ⚠ Warning 
-> There is literally no warranty if you self-host Coinz, and we will not help you set it up either. If you wish to set the bot up yourself, we expect you have well enough knowledge in Node.js.
+> There is literally no warranty if you self-host Coinz, and we will not help you set it up either. If you wish to set the bot and/or website up yourself, we expect you have well enough knowledge in Node.js and Python.
 
 ## License
 
