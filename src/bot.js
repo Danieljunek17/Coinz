@@ -13,9 +13,10 @@ client.slashCommands = new Collection();
 client.config = require('./config.json');
 client.database = require('./database/mongoose');
 client.tools = require('./tools/tools');
+client.tables = require('./tools/tables');
 client.logger = require('./tools/logger');
 client.cooldown = require('./tools/cooldown');
-client.resolver = require('./tools/resolvers')
+client.resolver = require('./tools/resolvers');
 
 async function init() {
     // Event handler
